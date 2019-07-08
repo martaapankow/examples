@@ -31,14 +31,18 @@ public class PorownajZbiory {
                     namesM.add(sc2.next());
                 }
                 sc2.close();
+				
+				List<String> namesEBUpper = namesEB.stream().map(String::toUpperCase).collect(toList());
 
-                Set<String> zbior1 = new HashSet<String>(namesEB);
+                Set<String> zbior1 = new HashSet<String>(namesEBUpper);
 
                 Set<String> zbior2 = new HashSet<String>(namesM);
 
                 Set<String> zbior3 = new HashSet<String>(zbior1);
 
                 zbior3.removeAll(zbior2);
+				
+				
 
                 // wypisanie imion do analizy
 
